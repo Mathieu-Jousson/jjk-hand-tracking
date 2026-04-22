@@ -16,7 +16,7 @@ Ce projet est un système de reconnaissance de gestes en temps réel basé sur l
 Ouvrez votre terminal (Git Bash recommandé sur Windows) et exécutez ces commandes à la suite.
 
 
-Sur Windows (Git Bash) :
+Bash :
 
 ```bash
 # Cloner le projet
@@ -25,7 +25,9 @@ cd jjk-hand-tracking
 
 # Créer et activer un environnement virtuel
 python -m venv venv
-source venv/Scripts/activate
+source venv/Scripts/activate 
+# remplacer par ".\venv\Scripts\Activate.ps1" pour Windows Powershell
+# remplacer par "source venv/bin/activate" pour Mac/Linux
 
 # Installation des dépendances
 pip install -r requirements.txt
@@ -34,23 +36,6 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-Sur Mac/Linux :
-
-```bash
-# Cloner le projet
-git clone https://github.com/Mathieu-Jousson/jjk-hand-tracking.git
-cd jjk-hand-tracking
-
-# Créer et activer un environnement virtuel
-python -m venv venv
-source venv/bin/activate
-
-# Installation des dépendances
-pip install -r requirements.txt
-
-# Lancement
-python src/main.py
-```
 
 
 
@@ -67,7 +52,7 @@ This project is a real-time gesture recognition system based on the Jujutsu Kais
 ### 🚀 Quick Start & Installation
 Open your terminal (Git Bash recommended for Windows) and run the following commands.
 
-Windows (Git Bash):
+Bash :
 
 ```Bash
 # Clone the project
@@ -77,24 +62,8 @@ cd jjk-hand-tracking
 # Create and activate a virtual environment
 python -m venv venv
 source venv/Scripts/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run
-python src/main.py
-```
-
-Mac/Linux:
-
-```Bash
-# Clone the project
-git clone https://github.com/Mathieu-Jousson/jjk-hand-tracking.git
-cd jjk-hand-tracking
-
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate
+# replace by ".\venv\Scripts\Activate.ps1" on Windows Powershell
+# remplace by "source venv/bin/activate" on Mac/Linux
 
 # Install dependencies
 pip install -r requirements.txt
