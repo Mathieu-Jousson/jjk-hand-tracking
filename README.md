@@ -32,9 +32,11 @@ uv venv
 source .venv/Scripts/activate
 
 # Installation éclair des dépendances
+echo "Installation des dépendances (soyez un peu patient)..."
 uv pip install -r requirements.txt
 
 # Lancement
+echo "Tout est prêt, lancement !"
 python src/main.py
 ```
 
@@ -54,9 +56,11 @@ uv venv
 source .venv/bin/activate
 
 # Installation éclair des dépendances
+echo "Installation des dépendances (soyez un peu patient)..."
 uv pip install -r requirements.txt
 
 # Lancement
+echo "Tout est prêt, lancement !"
 python src/main.py
 ```
 
@@ -79,9 +83,11 @@ source venv/Scripts/activate
 # remplacer par "source venv/bin/activate" pour Mac/Linux
 
 # Installation des dépendances
+echo "Installation des dépendances (soyez un peu patient)..."
 pip install -r requirements.txt
 
 # Lancement
+echo "Tout est prêt, lancement !"
 python src/main.py
 ```
 
@@ -118,9 +124,11 @@ uv venv
 source .venv/Scripts/activate
 
 # Lightning fast dependency installation
+echo "Installing dependencies (this might take a while)..."
 uv pip install -r requirements.txt
 
 # Run the project
+echo "Setup complete. Launching Domain Expansion!"
 python src/main.py
 ```
 
@@ -140,9 +148,11 @@ uv venv
 source .venv/bin/activate
 
 # Lightning fast dependency installation
+echo "Installing dependencies (this might take a while)..."
 uv pip install -r requirements.txt
 
 # Run the project
+echo "Setup complete. Launching Domain Expansion!"
 python src/main.py
 ```
 
@@ -163,8 +173,10 @@ source venv/Scripts/activate
 # remplace by "source venv/bin/activate" on Mac/Linux
 
 # Install dependencies
+echo "Installing dependencies (this might take a while)..."
 pip install -r requirements.txt
 
 # Run
+echo "Setup complete. Launching Domain Expansion!"
 python src/main.py
 ```
