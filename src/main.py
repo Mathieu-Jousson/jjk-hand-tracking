@@ -9,6 +9,7 @@ import time
 import joblib
 import pygame
 import os
+import pandas as pd
 
 from building_dataset import FeatureExtractor
 
@@ -28,9 +29,14 @@ HAND_CONNECTIONS = [
     (0,17), (17,18), (18,19), (19,20), (5,9), (9,13), (13,17)
 ]
 
+# Nom des 182 features
+FEATURE_NAMES = [f'L_{i}' for i in range(88)] + \
+    [f'R_{i}' for i in range(88)] + \
+    [f'Inter_{i}' for i in range(6)]
+
+
 # --- INITIALISATION AUDIO ---
 pygame.mixer.init()
-# Dictionnaire reliant l'ID du signe au fichier son
 sounds = {
     1: pygame.mixer.Sound(os.path.join(ROOT_DIR, "sounds", "gojo.wav")),
     2: pygame.mixer.Sound(os.path.join(ROOT_DIR, "sounds", "sukuna.wav")),
@@ -98,10 +104,13 @@ def main():
             
             # Assemblage du vecteur final (182)
             full_vector = feat_L + feat_R + feat_inter
+            
+            if len(full_vector) == 182: 
+                features_df = pd.DataFrame([full_vector], columns=FEATURE_NAMES)
+            
 
         # C. Prédiction et Box
-            input_data = np.array(full_vector).reshape(1, -1)
-            probabilities = jjk_model.predict_proba(input_data)[0]
+            probabilities = jjk_model.predict_proba(features_df)[0]
             prediction = np.argmax(probabilities)
             confidence = probabilities[prediction]
 
