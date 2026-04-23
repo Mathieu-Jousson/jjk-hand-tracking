@@ -5,7 +5,7 @@
 ## 🇫🇷 Français (English below)
 
 ### 📖 Description
-Ce projet est un système de reconnaissance de gestes en temps réel basé sur l'univers de **Jujutsu Kaisen**. Déclenchement d'extensions du territoire à la reconnaissance des bons signes par vision par ordinateur et Machine Learning. 
+Ce projet est un système de reconnaissance de gestes en temps réel basé sur l'univers de **Jujutsu Kaisen**. Déclenchement d'extensions du territoire à la reconnaissance des bons signes par vision par ordinateur et Machine Learning (Gojo, Sukuna, Mahito, Megumi).
 
 ### 🛠️ Caractéristiques Techniques
 - **Vision ordinateur :** Google Mediapipe ("https://research.google/pubs/mediapipe-hands-on-device-real-time-hand-tracking/")
@@ -14,6 +14,55 @@ Ce projet est un système de reconnaissance de gestes en temps réel basé sur l
 
 ### 🚀 Installation et Lancement Rapide
 Ouvrez votre terminal (Git Bash recommandé sur Windows) et exécutez ces commandes à la suite.
+
+- #### Installation eclair (<1min) avec uv :
+
+Windows (Git Bash) :
+
+```bash
+# Cloner le projet
+git clone https://github.com/Mathieu-Jousson/jjk-hand-tracking.git
+cd jjk-hand-tracking
+
+# Installer uv
+pip install uv
+
+# Créer et activer un environnement virtuel
+uv venv
+source .venv/Scripts/activate
+
+# Installation éclair des dépendances
+uv pip install -r requirements.txt
+
+# Lancement
+python src/main.py
+```
+
+Mac/Linux :
+
+```bash
+# Cloner le projet
+git clone https://github.com/Mathieu-Jousson/jjk-hand-tracking.git
+cd jjk-hand-tracking
+
+# Installer uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.cargo/env # pour activer uv immédiatement
+
+# Créer et activer un environnement virtuel
+uv venv
+source .venv/bin/activate
+
+# Installation éclair des dépendances
+uv pip install -r requirements.txt
+
+# Lancement
+python src/main.py
+```
+
+
+
+- #### Installation classique avec pip (un peu plus long) :
 
 
 Bash :
@@ -42,7 +91,7 @@ python src/main.py
 ## 🇺🇸 English
 
 ### 📖 Description
-This project is a real-time gesture recognition system based on the Jujutsu Kaisen universe. It triggers Domain Expansions by recognizing specific hand signs using Computer Vision and Machine Learning.
+This project is a real-time gesture recognition system based on the Jujutsu Kaisen universe. It triggers Domain Expansions by recognizing specific hand signs using Computer Vision and Machine Learning (Gojo, Sukuna, Mahito, Megumi).
 
 ### 🛠️ Technical Specifications
 - Computer Vision: Google Mediapipe ("https://research.google/pubs/mediapipe-hands-on-device-real-time-hand-tracking/")
@@ -51,6 +100,54 @@ This project is a real-time gesture recognition system based on the Jujutsu Kais
 
 ### 🚀 Quick Start & Installation
 Open your terminal (Git Bash recommended for Windows) and run the following commands.
+
+
+- #### Lightning Installation (<1min) with uv :
+Windows (Git Bash):
+
+```Bash
+# Clone the project
+git clone https://github.com/Mathieu-Jousson/jjk-hand-tracking.git
+cd jjk-hand-tracking
+
+# Install uv
+pip install uv
+
+# Create and activate a virtual environment
+uv venv
+source .venv/Scripts/activate
+
+# Lightning fast dependency installation
+uv pip install -r requirements.txt
+
+# Run the project
+python src/main.py
+```
+
+Mac/Linux:
+
+```Bash
+# Clone the project
+git clone https://github.com/Mathieu-Jousson/jjk-hand-tracking.git
+cd jjk-hand-tracking
+
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.cargo/env # Activate uv immediately
+
+# Create and activate a virtual environment
+uv venv
+source .venv/bin/activate
+
+# Lightning fast dependency installation
+uv pip install -r requirements.txt
+
+# Run the project
+python src/main.py
+```
+
+
+- #### Standard Installation with pip (Slightly slower)
 
 Bash :
 
