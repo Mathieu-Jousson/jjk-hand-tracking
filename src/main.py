@@ -148,9 +148,8 @@ def main():
                 except Exception as e:
                     print(f"Erreur visuelle : {e}")
 
-                key = cv2.waitKey(1) & 0xFF
-
         cv2.imshow("Ryooiki tenkai", frame)
+        key = cv2.waitKey(1) & 0xFF
         if key == ord('q') or key == 27: break
         if cv2.getWindowProperty("Ryooiki tenkai", cv2.WND_PROP_VISIBLE) < 1: break
 

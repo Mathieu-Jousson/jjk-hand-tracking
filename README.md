@@ -36,7 +36,7 @@ echo "Installation des dépendances (soyez un peu patient)..."
 uv pip install -r requirements.txt
 
 # Lancement
-echo "Tout est prêt, lancement !"
+echo "Tout est prêt, lancement ! ... (ça prend quelques secondes)"
 python src/main.py
 ```
 
@@ -60,7 +60,7 @@ echo "Installation des dépendances (soyez un peu patient)..."
 uv pip install -r requirements.txt
 
 # Lancement
-echo "Tout est prêt, lancement !"
+echo "Tout est prêt, lancement !... (ça prend quelques secondes)"
 python src/main.py
 ```
 
@@ -87,7 +87,7 @@ echo "Installation des dépendances (soyez un peu patient)..."
 pip install -r requirements.txt
 
 # Lancement
-echo "Tout est prêt, lancement !"
+echo "Tout est prêt, lancement ! ... (ça prend quelques secondes)"
 python src/main.py
 ```
 
@@ -128,7 +128,7 @@ echo "Installing dependencies (this might take a while)..."
 uv pip install -r requirements.txt
 
 # Run the project
-echo "Setup complete. Launching Domain Expansion!"
+echo "Setup complete. Launching Domain Expansion! ... (it will take a few seconds)"
 python src/main.py
 ```
 
@@ -152,7 +152,7 @@ echo "Installing dependencies (this might take a while)..."
 uv pip install -r requirements.txt
 
 # Run the project
-echo "Setup complete. Launching Domain Expansion!"
+echo "Setup complete. Launching Domain Expansion! ... (it will take a few seconds)"
 python src/main.py
 ```
 
@@ -177,6 +177,6 @@ echo "Installing dependencies (this might take a while)..."
 pip install -r requirements.txt
 
 # Run
-echo "Setup complete. Launching Domain Expansion!"
+echo "Setup complete. Launching Domain Expansion! ... (it will take a few seconds)"
 python src/main.py
 ```
