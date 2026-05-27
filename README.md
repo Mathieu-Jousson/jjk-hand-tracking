@@ -2,10 +2,12 @@
 
 ---
 
+![Demo de l'application](gif_jjk_demo.gif)
+
 ## 🇫🇷 Français (English below)
 
 ### 📖 Description
-Ce projet est un système de reconnaissance de gestes en temps réel basé sur l'univers de **Jujutsu Kaisen**. Déclenchement d'extensions du territoire à la reconnaissance des bons signes par vision par ordinateur et Machine Learning (Gojo, Sukuna, Mahito, Megumi).
+Reconnaissance de gestes en temps réel basé sur l'univers de **Jujutsu Kaisen**. Déclenchement d'extensions du territoire avec audio à la reconnaissance des bons signes par vision par ordinateur et Machine Learning (Gojo, Sukuna, Mahito, Megumi).
 
 ### 🛠️ Caractéristiques Techniques
 - **Vision ordinateur :** Google Mediapipe ("https://research.google/pubs/mediapipe-hands-on-device-real-time-hand-tracking/")

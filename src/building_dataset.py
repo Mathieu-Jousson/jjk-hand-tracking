@@ -107,14 +107,15 @@ class FeatureExtractor:
 
 # --- GESTION DU FICHIER CSV ---
 
+FEATURE_NAMES = [f'L_{i}' for i in range(88)] + \
+                [f'R_{i}' for i in range(88)] + \
+                [f'Inter_{i}' for i in range(6)]
+
 def init_csv():
     """Crée le fichier avec l'en-tête s'il n'existe pas"""
     if not os.path.exists(DATASET_PATH):
         with open(DATASET_PATH, mode='w', newline='') as f:
-            header = [f'L_{i}' for i in range(NUM_FEATURES_PER_HAND)] + \
-                     [f'R_{i}' for i in range(NUM_FEATURES_PER_HAND)] + \
-                     [f'Inter_{i}' for i in range(6)]
-            csv.writer(f).writerow(header)
+            csv.writer(f).writerow(FEATURE_NAMES)
 
 # --- BOUCLE PRINCIPALE ---
 def main():
