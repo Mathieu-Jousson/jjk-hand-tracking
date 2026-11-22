@@ -5,3 +5,5 @@ scikit-learn
 joblib
 pandas
 numpy
+matplotlib
+sounddevice

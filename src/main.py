@@ -12,6 +12,7 @@ import os
 import pandas as pd
 
 from building_dataset import FeatureExtractor
+from effects import draw_aura, draw_hand_lightning
 
 
 # --- CONFIGURATION & CHARGEMENT ---
@@ -77,6 +78,7 @@ def main():
         lm_L, lm_R = None, None
         sc_L, sc_R = 0, 0
         all_pts = []
+        hands_pts = []
 
 
         if result.hand_landmarks:
@@ -96,8 +98,9 @@ def main():
                 for conn in HAND_CONNECTIONS:
                     p1, p2 = landmarks[conn[0]], landmarks[conn[1]]
                     cv2.line(frame, (int(p1.x*w), int(p1.y*h)), (int(p2.x*w), int(p2.y*h)), color_skel, 2)
-                for lm in landmarks:
-                    all_pts.append((int(lm.x*w), int(lm.y*h)))
+                hand_pts = [(int(lm.x*w), int(lm.y*h)) for lm in landmarks]
+                hands_pts.append(hand_pts)
+                all_pts.extend(hand_pts)
 
             # Calcul des 6 features Inter-mains
             feat_inter = extractor.get_inter_hand_features(lm_L, lm_R, sc_L, sc_R)
@@ -147,6 +150,10 @@ def main():
                     # Choix de la couleur selon le territoire
                     colors = [(0,255,0), (255,0,0), (0,0,255), (0,255,255), (255,0,255)]
                     box_color = colors[prediction % len(colors)]
+
+                    for hand_pts in hands_pts:
+                        draw_aura(frame, hand_pts, box_color)
+                        draw_hand_lightning(frame, hand_pts)
 
                     # Dessin de la boîte et du texte
                     cv2.rectangle(frame, (int(x_min), int(y_min)), (int(x_max), int(y_max)), box_color, 2)
