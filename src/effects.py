@@ -39,9 +39,9 @@ def draw_hand_lightning(frame, pts, n_bolts=7, color=(0, 0, 0)):
         angle = offset + 2 * np.pi * k / n_bolts + np.random.uniform(-0.3, 0.3)
         target = np.array([np.cos(angle), np.sin(angle)])
         start = hull[np.argmax(hull_dirs @ target)]
-        length = np.random.uniform(60, 120)
-        points = draw_bolt(frame, start, angle, length, 4, color=color)
+        length = np.random.uniform(80, 150)
+        points = draw_bolt(frame, start, angle, length, 3, color=color)
         if np.random.rand() < 0.6:
             fork_start = points[len(points) // 2]
             fork_angle = angle + np.random.choice([-1, 1]) * np.random.uniform(0.4, 0.8)
-            draw_bolt(frame, fork_start, fork_angle, length * 0.5, 2, segments=4, jitter=8, color=color)
+            draw_bolt(frame, fork_start, fork_angle, length * 0.5, 1, segments=4, jitter=8, color=color)
